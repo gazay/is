@@ -51,21 +51,21 @@ class Is
 
     def bounding_box
       {
-        'left' => area.min{|a, b| a.longitude <=> b.longitude}.longitude,
-        'right' => area.max{|a, b| a.longitude <=> b.longitude}.longitude,
-        'top' => area.max{|a, b| a.latitude <=> b.latitude}.latitude,
+        'left'   => area.min{|a, b| a.longitude <=> b.longitude}.longitude,
+        'right'  => area.max{|a, b| a.longitude <=> b.longitude}.longitude,
+        'top'    => area.max{|a, b| a.latitude <=> b.latitude}.latitude,
         'bottom' => area.min{|a, b| a.latitude <=> b.latitude}.latitude
       }
     end
 
     def outside_box?(point)
-      if point.nil? || point.longitude.nil? || point.latitude.nil?
+      if point.nil? or point.longitude.nil? or point.latitude.nil?
         true
       else
         box = bounding_box
-        point.longitude < box['left']   ||
-        point.longitude > box['right']  ||
-        point.latitude  < box['bottom'] ||
+        point.longitude < box['left']   or
+        point.longitude > box['right']  or
+        point.latitude  < box['bottom'] or
         point.latitude  > box['top']
       end
     end
