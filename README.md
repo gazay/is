@@ -2,6 +2,8 @@
 
 ### Build Status ![http://travis-ci.org/gazay/is](https://secure.travis-ci.org/gazay/is.png)
 
+Sponsored by Evil Martians <http://evilmartians.com>
+
 ``` ruby
 pt = [2, 2]
 all_pts = [[2, 2], [2, 2.5]]
