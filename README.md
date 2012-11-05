@@ -5,11 +5,11 @@
 Sponsored by Evil Martians <http://evilmartians.com>
 
 ``` ruby
-pt =      [2, 2]
+pt      = [2, 2]
 all_pts = [[2, 2], [2, 2.5]]
 any_pts = [[2, 0], [2, 2]]
-no_pts =  [[0, 0], [1, 0]]
-area  = \
+no_pts  = [[0, 0], [1, 0]]
+area    = \
   [
     [1, 1],
     [3, 1],
