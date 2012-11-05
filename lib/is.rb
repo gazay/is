@@ -14,7 +14,7 @@ class Is
 
       pts.define_singleton_method :in?, ->(area) do
         area = Area.new area
-        all? { |point| Point.new(*point).in? area }
+        all? { |point| Is.point(point).in? area }
       end
 
       pts
@@ -26,7 +26,7 @@ class Is
 
       pts.define_singleton_method :in?, ->(area) do
         area = Area.new area
-        any? { |point| Point.new(*point).in? area }
+        any? { |point| Is.point(point).in? area }
       end
 
       pts
@@ -37,7 +37,7 @@ class Is
 
       pts.define_singleton_method :in, ->(area) do
         area = Area.new area
-        select { |point| Point.new(*point).in? area }
+        select { |point| Is.point(point).in? area }
       end
 
       pts
@@ -48,7 +48,7 @@ class Is
 
       pts.define_singleton_method :in, ->(area) do
         area = Area.new area
-        find { |point| Point.new(*point).in? area }
+        find { |point| Is.point(point).in? area }
       end
 
       pts
