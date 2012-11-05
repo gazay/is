@@ -5,10 +5,10 @@
 Sponsored by Evil Martians <http://evilmartians.com>
 
 ``` ruby
-pt = [2, 2]
+pt =      [2, 2]
 all_pts = [[2, 2], [2, 2.5]]
 any_pts = [[2, 0], [2, 2]]
-no_pts = [[0, 0], [1, 0]]
+no_pts =  [[0, 0], [1, 0]]
 area  = \
   [
     [1, 1],
@@ -16,6 +16,15 @@ area  = \
     [3, 3],
     [1, 3]
   ]
+
+  ^
+3 |  _______
+  | |       |
+2 | |       |
+  | |       |
+1 | |_______|
+  |_____________>
+0   1   2   3
 
 Is.point(pt).in?(area)           # => true
 Is.all_points(all_pts).in?(area) # => true
