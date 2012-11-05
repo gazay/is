@@ -21,6 +21,8 @@ Is.point(pt).in?(area)           # => true
 Is.all_points(all_pts).in?(area) # => true
 Is.any_points(any_pts).in?(area) # => true
 Is.any_points(no_pts).in?(area)  # => false
+Is.select(any_pts).in(area)      # => [[2, 2]]
+Is.first(any_pts).in(area)       # => [[2, 2]]
 
 # or
 Is.point_in_area?(pt, area)           # => true

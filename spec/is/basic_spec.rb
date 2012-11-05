@@ -52,6 +52,42 @@ describe Is do
 
   end
 
+  describe '#select' do
+
+    it 'points in area' do
+      points = [[2, 0], [2, 2.5], [2.5, 2.25]]
+      Is.select(points).in(AREA).should == [[2, 2.5], [2.5, 2.25]]
+    end
+
+  end
+
+  describe '#first' do
+
+    it 'point in area' do
+      points = [[2, 0], [2, 2.5], [2.5, 2.25]]
+      Is.first(points).in(AREA).should == [2, 2.5]
+    end
+
+  end
+
+  describe '#select_points_in_area' do
+
+    it 'points in area' do
+      points = [[2, 0], [2, 2.5], [2.5, 2.25]]
+      Is.select_points_in_area(points, AREA).should == [[2, 2.5], [2.5, 2.25]]
+    end
+
+  end
+
+  describe '#first_point_in_area' do
+
+    it 'point in area' do
+      points = [[2, 0], [2, 2.5], [2.5, 2.25]]
+      Is.first_point_in_area(points, AREA).should == [2, 2.5]
+    end
+
+  end
+
   describe '#point_in_area?' do
 
     it 'is inside area' do
