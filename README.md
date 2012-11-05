@@ -31,13 +31,15 @@ Is.all_points(all_pts).in?(area) # => true
 Is.any_points(any_pts).in?(area) # => true
 Is.any_points(no_pts).in?(area)  # => false
 Is.select(any_pts).in(area)      # => [[2, 2]]
-Is.first(any_pts).in(area)       # => [[2, 2]]
+Is.first(any_pts).in(area)       # => [2, 2]
 
 # or
-Is.point_in_area?(pt, area)           # => true
-Is.all_points_in_area?(all_pts, area) # => true
-Is.any_points_in_area?(any_pts, area) # => true
-Is.any_points_in_area?(no_pts, area)  # => false
+Is.point_in_area?(pt, area)             # => true
+Is.all_points_in_area?(all_pts, area)   # => true
+Is.any_points_in_area?(any_pts, area)   # => true
+Is.any_points_in_area?(no_pts, area)    # => false
+Is.select_points_in_area(any_pts, area) # => [[2, 2]]
+Is.first_point_in_area(any_pts, area)   # => [2, 2]
 ```
 
 ## License
